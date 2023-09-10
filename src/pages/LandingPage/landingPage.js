@@ -98,10 +98,30 @@ import arrows from '../../Assets/arrow.png';
 
 
 function LandingPage() {
+
+    const containerStyle = {
+        width: '90%',
+        margin: '0 auto', // Center the container horizontally
+        display: 'flex',
+        flexWrap: 'wrap',
+      };
+      const customBoxStyles = {
+        alignItems: 'center', // Additional custom style
+        justifyContent:"center",
+        display:"flex"
+      };
+      const boxStyle = {
+        flex: '1',
+        minWidth: '30%', // Each box takes up 30% of the container's width
+        padding: '20px', // Add spacing and content to the boxes
+        boxSizing: 'border-box', // Include padding in the box's width
+        margin: '10px', // Add margin between boxes
+      };
+
   return (
    <>
    {/* Header Section  */}
-   <div style={{width:'100%', height:'120px',  display:'flex',alignItems:'center'}}>
+   {/* <div style={{width:'100%', height:'120px',  display:'flex',alignItems:'center', backgroundColor:'red', flexWrap:'wrap'}}>
     <div style={{width:'20%', height:"100%", alignItems:'center', justifyContent:'center', display:'flex'}}>
         <img style={{width:119, cursor:'pointer'}} src={logo}/>
     </div>
@@ -110,7 +130,20 @@ function LandingPage() {
     </div>
     <div style={{width:'20%', height:"100%",  display:'none'}}></div>
 
-   </div>
+   </div> */}
+
+
+<div style={containerStyle}>
+      <div style={boxStyle}>
+      <div style={{width:'20%', height:"100%", alignItems:'center', justifyContent:'center'}}>
+        <img style={{width:119, cursor:'pointer'}} src={logo}/>
+    </div>
+      </div>
+      <div style={{ ...boxStyle, ...customBoxStyles }}>
+      <h3>Let's get started</h3>
+      </div>
+      <div style={boxStyle}>Box 3</div>
+    </div>
    
    {/* body section */}
 
@@ -129,17 +162,17 @@ function LandingPage() {
 
             {/* center div */}
 
-            <div style={{width:'460px',padding:'14px', backgroundColor:'#F06335', gap:'8px', borderRadius:'8px', display:'flex',justifyContent:'center'}}>
-                <div style={{width:165,backgroundColor:'transparent',color:'white', padding:'7px'}}>
+            <div style={{width:'460px',padding:'0px', backgroundColor:'#F06335', gap:'8px', borderRadius:'8px', display:'flex',justifyContent:'center'}}>
+                <div style={{width:'60%',backgroundColor:'transparent',color:'white', padding:'7px'}}>
                     <h3 style={{fontWeight:'bold', fontSize:18, backgroundColor:'transparent',marginBottom:'3px', fontFamily:'sans-serif'}}>Profile Info:</h3>
                     
                     <p style={{fontSize:11, backgroundColor:'transparent', fontFamily:'sans-serif',margin:0}}>Berkeley, CA</p>
                     
                     <p style={{fontSize:11, backgroundColor:'transparent', fontFamily:'sans-serif'}}>ella-brown@gmail.com</p>
                 </div>
-                <div style={{padding:'20px', fontSize:12, backgroundColor:'#F06335', color:'white'}}>
+                <div style={{padding:'20px', fontSize:12,  backgroundColor:'#F06335', color:'white', width:'40%', borderTopRightRadius:10, borderBottomRightRadius:10}}>
                     <p style={{backgroundColor:'transparent', fontFamily:'sans-serif',margin:0}}>123-456-7890</p>
-                    <p style={{backgroundColor:'transparent', fontSize:11, fontFamily:'sans-serif',margin:0}}>linkedin.com/in/ella-brown/product-designer/</p>
+                    <p style={{backgroundColor:'transparent', fontSize:11, fontFamily:'sans-serif'}}>linkedin.com/in/ella-brown/product-designer/</p>
                 </div>
             </div>
 
@@ -203,7 +236,7 @@ function LandingPage() {
                 </div>
                 <div style={{backgroundColor:'transparent',alignSelf:'center'}}>
                     <p style={{backgroundColor:'transparent', fontSize:18, fontWeight:'bold', fontFamily:'sans-serif',margin:0,paddingTop:8}}>Achievements</p>
-                    <ul style={{width:434, backgroundColor:'transparent', fontSize:11}}>
+                    <ul style={{width:434, backgroundColor:'transparent', fontSize:11, width:'80%'}}>
                         <li style={{backgroundColor:'transparent', fontSize:11, fontFamily:'sans-serif'}}>Boosted product sales by 20% by implementing user-centered design principles, leading to improved customer engagement and satisfaction.</li>
                         <li style={{backgroundColor:'transparent', fontSize:11, fontFamily:'sans-serif'}}>Reduced user complaints by 30% by conducting thorough usability testing and incorporating feedback into the design process, resulting in an improved overall user experience.</li>
                     </ul>
@@ -339,7 +372,7 @@ function LandingPage() {
             <img style={{width:22, height:22}} src={arrows}/>
         </span>
     </div>
-    <div style={{alignItems:'center', justifyContent:'center',paddingTop:12}}>
+    <div style={{paddingTop:12, width:'80%',  alignItems:'center', justifyContent:"center", display:'flex'}}>
         <p style={{fontSize:12, fontFamily:'sans-serif'}}> By clicking <span style={{color:'#F06335', fontFamily:'sans-serif'}}> ‘Continue’,</span> you agree to our <a style={{color:'#F06335', fontFamily:'sans-serif'}} href='https://cvjury.com/terms-and-conditions/'>Terms and Conditions</a> and <span > <a style={{color:'#F06335'}} href='https://cvjury.com/privacy-policy/' > Privacy Policy</a></span></p>
     </div>
    </div>
@@ -348,3 +381,4 @@ function LandingPage() {
 }
 
 export default LandingPage
+
