@@ -1,0 +1,170 @@
+.admin_sidebar .sidebar_content {
+  padding-top: 2rem;
+}
+
+.hideSidebar {
+  // width: 0;
+  //   display: none;
+  padding: 0px 0px 10px;
+  transform: translateX(-80%);
+  // .sidebarContent {
+  //   // display: none;
+  // }
+}
+
+.sidebarlogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  // background-color: #303a4d;
+  // border-bottom: 1px solid grey;
+  position: relative;
+  padding: 0 25px;
+  height: 57px;
+  // margin: 1rem 0;
+
+  img {
+    background-color: white;
+    padding: 0.5rem 10px;
+    border-radius: 10px;
+    max-width: 100px;
+  }
+
+  .closeSidebar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+
+    // svg {
+    // }
+  }
+  // .closeSidebar_open {
+  //   transform: rotate(180deg);
+  // }
+  .closeSidebar:hover {
+    transition: 0.2s ease-in-out;
+    svg {
+      fill: #ec6336;
+    }
+  }
+}
+.sidebarBody {
+  padding: 1rem 0;
+  // padding: 1rem 10px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.proTips_Accordian {
+  transition: all ease-in-out 0.2s;
+  // border-bottom: 1px solid #ec6336;
+
+  .proTips_Accordian_Item {
+    transition: all ease-in-out 0.2s;
+    background: transparent;
+    // background: #3c4b64;
+    margin-bottom: 10px;
+
+    .proTips_Accordian_Header {
+      // transition: all ease-in-out 0.2s;
+
+      .proTips_Accordian_Header_linkedIn_svg {
+        // background-color: #0a66c2;
+        border-radius: 3px;
+        padding: 0px 5px 3px;
+        margin-right: 10px;
+      }
+      .proTips_Accordian_Header_expand_svg {
+        transform: rotate(-90deg);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .accordion-button::after {
+        display: none;
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: auto;
+        content: '';
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        transition: transform 0.2s ease-in-out;
+        transform: rotate(-90deg);
+      }
+
+      .accordion-button:not(.collapsed) .proTips_Accordian_Header_expand_svg {
+        // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e"); // rgb(236, 99, 54)
+        transform: rotate(0deg);
+      }
+
+      button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        // background-color: #ec6336;
+        // color: #ffffff;
+        // background-color: #fdf0ec;
+        background-color: #131313;
+        color: white;
+        // border-radius: 10px !important;
+        padding: 0 1rem;
+        font-size: 14px;
+        padding: 10px 25px;
+
+        div {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
+      }
+      button:focus {
+        box-shadow: none;
+      }
+    }
+
+    .accordian_body_inverted {
+      // background-color: #4d7fa2 !important;
+      background-color: #ec6336 !important;
+      a {
+        color: #ffffff !important;
+      }
+    }
+    .proTips_Accordian_Body {
+      //   min-height: 200px;
+      //   max-height: 400px;
+      transition: all ease-in-out 0.2s;
+      background-color: black;
+      // background-color: #fdf0ec;
+      // border-radius: 10px !important;
+      //   overflow-y: scroll;
+      color: white;
+      // margin-top: 5px;
+      padding: 0;
+      a {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+        font-size: 12px;
+        padding: 10px 25px;
+        padding-left: calc(0.75rem + 25px);
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        // display: block;
+      }
+    }
+  }
+}
