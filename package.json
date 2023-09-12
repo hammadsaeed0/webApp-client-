@@ -72,7 +72,8 @@
     "start": "react-scripts start",
     "build": "react-scripts --max_old_space_size=4096 build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-css": "sass --style compressed --no-source-map src/index.scss public/styles.min.css"
   },
   "eslintConfig": {
     "extends": [
