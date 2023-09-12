@@ -242,7 +242,7 @@ function LandingPage() {
                     </ul>
                 </div>
                 <div style={{backgroundColor:'transparent', alignItems:'center', justifyContent:'center', display:'flex'}}>
-                    <input placeholder='Type here...' style={{width:'100%', color:'gray', padding:'15px', height:60, border:0, borderRadius:8, cursor:'po'}}></input>
+                    <input readonly='readonly' placeholder='Type here...' style={{width:'100%', color:'gray', padding:'15px', height:60, border:0, borderRadius:8, cursor:'po'}}></input>
                 </div>
             </div>
 
@@ -368,12 +368,14 @@ function LandingPage() {
         <Link  to='/builderChooseBlankOrExample' style={{color:'#F06335', fontSize:30, border:'0px', fontWeight:'bold', cursor:'pointer', fontFamily:'sans-serif'}}>Continue
        
         </Link>
+        <Link to='/builderChooseBlankOrExample'>
          <span>
             <img style={{width:22, height:22}} src={arrows}/>
         </span>
+        </Link>
     </div>
     <div style={{paddingTop:12, width:'80%',  alignItems:'center', justifyContent:"center", display:'flex'}}>
-        <p style={{fontSize:12, fontFamily:'sans-serif'}}> By clicking <span style={{color:'#F06335', fontFamily:'sans-serif'}}> ‘Continue’,</span> you agree to our <a style={{color:'#F06335', fontFamily:'sans-serif'}} href='https://cvjury.com/terms-and-conditions/'>Terms and Conditions</a> and <span > <a style={{color:'#F06335'}} href='https://cvjury.com/privacy-policy/' > Privacy Policy</a></span></p>
+        <p style={{fontSize:12, fontFamily:'sans-serif'}}> By clicking <Link to='/builderChooseBlankOrExample' style={{color:'#F06335', fontFamily:'sans-serif'}}> ‘Continue’,</Link> you agree to our <a style={{color:'#F06335', fontFamily:'sans-serif'}} href='https://cvjury.com/terms-and-conditions/'>Terms and Conditions</a> and <span > <a style={{color:'#F06335'}} href='https://cvjury.com/privacy-policy/' > Privacy Policy</a></span></p>
     </div>
    </div>
    </>

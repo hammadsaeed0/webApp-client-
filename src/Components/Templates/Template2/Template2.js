@@ -340,6 +340,8 @@ const Template2 = ({
       )
       .map((data, index) => (
         // filteredArray.map((data, index) => (
+
+        // Left Side 
         <>
           {
             <div key={data.key} ref={data.ref} className={data.class}>
@@ -984,13 +986,14 @@ const Template2 = ({
                 </svg>
               </span>
             </div>
+            {/* <p>mhjgfhjkgkuy</p> */}
             <div className='sidebar_section '>
               <div
                 name='experience_heading'
                 id={descp.id}
                 rows='1'
                 placeholder='Experience Name'
-                style={{ color: sidePanelTextColor }}
+                style={{ color: sidePanelTextColor}}
                 className={`section_heading  
                         ${headingTextStyleConditions}
 

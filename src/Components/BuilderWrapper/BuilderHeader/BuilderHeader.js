@@ -3,7 +3,7 @@ import { Link, useHistory, useParams } from 'react-router-dom';
 
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-
+import himg from '../../../Assets/logo2.png'
 export default function BuilderHeader({
   builderData,
   userData,
@@ -120,7 +120,7 @@ export default function BuilderHeader({
         <div className='builder_header_main_btns'>
           <div className='main_logo_header'>
             <div>
-              <img src='/assets/images/logo_black.png' alt='logo' />
+              <img style={{backgroundColor:'#ec6336'}} src={himg} alt='logo' />
             </div>
           </div>
           {share !== 'share' && (
